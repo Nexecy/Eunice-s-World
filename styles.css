@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F9D1D1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #FFA4B6;
+}
+
+/* Titles and Headings */
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFA4B6;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Lists */
+.fact-list,
+.drama-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fact-list .list-group-item,
+.drama-list .list-group-item {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border: none;
+}
+
+/* Buttons */
+.btn-outline-primary {
+    color: #ffffff;
+    background-color: rgb(53, 53, 194);
+    border-color: #3854a1;
+}
+
+.btn-outline-danger {
+    color: white;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.btn-outline-dark {
+    background: black;
+    color: white;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7e6ce6;
+    color: #fff;
+}
+
+.btn-outline-danger:hover {
+    background: #e6683c;
+    color: #fff;
+}
+
+.btn-outline-dark:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Carousel */
+.small-carousel {
+    max-width: 400px; /* Adjust carousel size */
+    max-height: 300px; /* Optional: Set a max height */
+}
+
+.small-carousel img {
+    object-fit: cover;
+    height: 300px; /* Control image height */
+    border-radius: 10px;
+}
+
+/* Gallery layout for images */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Ensures 3 equal columns */
+    gap: 15px;
+    justify-items: center;  /* Centers the items within their grid cells */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;  /* Optional: Prevent gallery from becoming too wide */
+    margin: 0 auto;  /* Center the gallery on the page */
+}
+
+/* Ensures all images in the gallery have the same dimensions */
+.gallery-item img {
+    width: 100%;
+    height: 250px;  /* Fixed height for all images */
+    object-fit: cover;  /* Maintain aspect ratio without distorting */
+    border-radius: 10px;  /* Optional rounded corners */
+}
+
+/* Optional: Add a hover effect to make the gallery more interactive */
+.gallery-item img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Make it responsive: If there are fewer than 3 images, ensure they are still centered */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);  /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;  /* Single column on extra small screens */
+    }
+}
+
+
+/* Style for the ordered list (numbered list) */
+.fact-list {
+    list-style-position: inside; /* Makes the numbers appear inside the list item */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Styling for each fact item to look like a bubble */
+.fact-item {
+    background-color: #d1e7fd; /* Light blue background for the bubble */
+    color: #333; /* Dark text color */
+    border-radius: 25px; /* Rounded corners to create a bubble effect */
+    padding: 15px 20px; /* Add padding for a nice bubble size */
+    margin-bottom: 10px; /* Space between bubbles */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+    font-size: 1.1rem; /* Adjust font size */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to enlarge the bubbles when hovered */
+.fact-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the bubble */
+    background-color: #a6c8ff; /* Slightly darker blue on hover */
+}
